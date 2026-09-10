@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ilham Wahyu Saputro | Full Stack Developer & AI Systems Engineer</title>
+  <meta name="description" content="Portfolio of Ilham Wahyu Saputro - Full Stack Developer & AI Systems Engineer specializing in Layer 6 API Security, Machine Learning, Computer Vision, and Modern Web Applications." />
+  <meta name="keywords" content="Ilham Wahyu Saputro, Full Stack Developer, AI Security, MiniFW-AI, RitAPI, Sydeco, Machine Learning, Computer Vision, SIBI CNN, RetinaScan, React, Python" />
+  <link rel="icon" type="image/jpeg" href="ILHAM1 foto.jpg" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#ecfdf5',
+              100: '#d1fae5',
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+              700: '#047857',
+            },
+            dark: {
+              950: '#030712',
+              900: '#0a0f1d',
+              850: '#0f172a',
+              800: '#1e293b',
+              700: '#334155'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            display: ['"Outfit"', 'system-ui', 'sans-serif'],
+            mono: ['"JetBrains Mono"', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="bg-dark-950 text-slate-100 antialiased selection:bg-emerald-500 selection:text-dark-950 relative min-h-screen">
+  <!-- Subtle Ambient Glows -->
+  <div class="fixed top-0 left-1/4 -translate-x-1/2 w-96 h-96 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none -z-10 animate-glow-pulse"></div>
+  <div class="fixed top-1/3 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-10 animate-glow-pulse" style="animation-delay: 4s;"></div>
+  <div class="fixed bottom-10 left-1/3 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl pointer-events-none -z-10"></div>
+
+  <!-- Navigation Bar -->
+  <header class="fixed top-0 left-0 right-0 z-50 glass-nav transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+      <!-- Brand Logo -->
+      <a href="#hero" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-400 p-[1.5px] shadow-lg shadow-emerald-500/20 group-hover:scale-105 transition-transform">
+          <div class="w-full h-full bg-dark-950 rounded-[10px] flex items-center justify-center font-mono font-bold text-emerald-400 text-sm">
+            IW
+          </div>
+        </div>
+        <div class="flex flex-col">
+          <span class="font-display font-bold text-white tracking-tight text-base group-hover:text-emerald-400 transition-colors">
+            Ilham Wahyu S.
+          </span>
+          <span class="text-[11px] font-mono text-emerald-400 flex items-center gap-1.5">
+            <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span>
+            Full Stack
+          </span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#about" class="hover:text-emerald-400 transition-colors">About</a>
+        <a href="#projects" class="hover:text-emerald-400 transition-colors">Projects</a>
+        <a href="#experience" class="hover:text-emerald-400 transition-colors">Experience</a>
+        <a href="#skills" class="hover:text-emerald-400 transition-colors">Skills</a>
+        <a href="#contact" class="hover:text-emerald-400 transition-colors">Contact</a>
+      </nav>
+
+      <!-- Header CTAs -->
+      <div class="hidden lg:flex items-center gap-3">
+        <a href="CV_Ilham_Wahyu_Saputro.pdf" download="CV_Ilham_Wahyu_Saputro.pdf"
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-slate-800/90 hover:bg-slate-700 text-slate-200 border border-slate-700/80 hover:border-emerald-500/40 transition-all">
+          <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+          <span>Resume (CV)</span>
+        </a>
+        <a href="#contact"
+           class="inline-flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-semibold bg-emerald-500 hover:bg-emerald-400 text-dark-950 font-bold transition-all shadow-lg shadow-emerald-500/20">
+          <span>Hire Me</span>
+          <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+        </a>
+      </div>
+
+      <!-- Mobile Hamburger Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg bg-slate-800 text-slate-300 hover:text-white" aria-label="Toggle Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-dark-900/95 border-b border-slate-800 px-6 py-5 space-y-4">
+      <a href="#about" class="block text-slate-300 hover:text-emerald-400 font-medium">About</a>
+      <a href="#projects" class="block text-slate-300 hover:text-emerald-400 font-medium">Projects</a>
+      <a href="#experience" class="block text-slate-300 hover:text-emerald-400 font-medium">Experience</a>
+      <a href="#skills" class="block text-slate-300 hover:text-emerald-400 font-medium">Skills</a>
+      <a href="#contact" class="block text-slate-300 hover:text-emerald-400 font-medium">Contact</a>
+      <div class="pt-3 border-t border-slate-800 flex gap-3">
+        <a href="CV_Ilham_Wahyu_Saputro.pdf" download class="flex-1 text-center py-2.5 rounded-xl bg-slate-800 text-xs font-semibold text-white">Download CV</a>
+        <a href="#contact" class="flex-1 text-center py-2.5 rounded-xl bg-emerald-500 text-xs font-bold text-dark-950">Hire Me</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-24">
+    <!-- Hero Section -->
+    <section id="hero" class="relative py-16 md:py-28 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+        <!-- Left Hero Content -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          <!-- Availability Pill -->
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs font-mono font-medium">
+            <span class="relative flex h-2 w-2">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+            </span>
+            Available for Full-Stack
+          </div>
+
+          <!-- Main Headline -->
+          <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight text-white leading-[1.15]">
+            Engineering Intelligent Systems from <span class="bg-gradient-to-r from-emerald-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">AI Security</span> to <span class="text-slate-100">Full-Stack Web</span>.
+          </h1>
+
+          <!-- Tagline / Bio -->
+          <p class="text-base sm:text-lg text-slate-300 max-w-2xl leading-relaxed">
+            Hi, I'm <strong class="text-white font-semibold">Ilham Wahyu Saputro</strong> — a Full Stack Developer. Contributor to <span class="text-emerald-300 font-medium">PT. Sydeco's RitAPI Layer 6 Behavioral Firewall</span>, create  <span class="text-cyan-300 font-medium">RetinaScan ML in program dicoding</span>, and computer vision researcher in <span class="text-indigo-300 font-medium">SIBI Gesture Recognition</span>
+          </p>
+
+          <!-- CTAs & Action Buttons -->
+          <div class="flex flex-wrap items-center gap-4 pt-2">
+            <a href="#projects" class="px-6 py-3.5 rounded-xl font-bold text-sm bg-emerald-500 hover:bg-emerald-400 text-dark-950 transition-all shadow-lg shadow-emerald-500/25 flex items-center gap-2 group">
+              <span>Explore Projects</span>
+              <svg class="w-4 h-4 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+
+            <a href="CV_Ilham_Wahyu_Saputro.pdf" download="CV_Ilham_Wahyu_Saputro.pdf" class="px-5 py-3.5 rounded-xl font-semibold text-sm bg-slate-900/90 hover:bg-slate-800 text-white border border-slate-700 hover:border-slate-500 transition-all flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+              <span>Download CV</span>
+            </a>
+          </div>
+
+          <!-- Social / Quick Connect Bar -->
+          <div class="pt-4 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-400">
+            <span class="text-slate-500">Connect:</span>
+            <a href="https://github.com/ilhamws" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+              <span>github.com/ilhamws</span>
+            </a>
+            <span class="text-slate-700">•</span>
+            <a href="https://linkedin.com/in/ilham-wahyu-saputro" target="_blank" rel="noopener noreferrer" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+              <span>linkedin.com/in/ilham-wahyu-saputro</span>
+            </a>
+            <span class="text-slate-700">•</span>
+            <button onclick="copyEmailToClipboard()" class="hover:text-emerald-400 transition-colors flex items-center gap-1.5 group/copy">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+              <span>Copy Email</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Hero Visual Card -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-sm">
+            <!-- Decorative Aura Glow -->
+            <div class="absolute -inset-1.5 bg-gradient-to-r from-emerald-500 via-cyan-500 to-indigo-500 rounded-3xl blur-xl opacity-30 group-hover:opacity-60 transition duration-1000"></div>
+
+            <div class="relative cyber-card rounded-3xl p-6 overflow-hidden">
+              <!-- Profile Avatar -->
+              <div class="relative mx-auto w-48 h-48 rounded-2xl overflow-hidden border-2 border-emerald-500/40 shadow-2xl mb-6 group">
+                <img src="ILHAM1 foto.jpg" alt="Ilham Wahyu Saputro" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-500" />
+                <div class="absolute inset-0 bg-gradient-to-t from-dark-950/80 via-transparent to-transparent"></div>
+                <div class="absolute bottom-2 left-2 right-2 text-center">
+                  <span class="inline-block px-2.5 py-0.5 text-[10px] font-mono font-semibold bg-dark-950/90 text-emerald-300 rounded-full border border-emerald-500/40">
+                    Yogyakarta, Indonesia
+                  </span>
+                </div>
+              </div>
+
+              <!-- Badges Card Info -->
+              <div class="space-y-3 text-center">
+                <h3 class="text-xl font-bold text-white font-display">Ilham Wahyu Saputro</h3>
+                <p class="text-xs font-mono text-emerald-400">Bachelor of Informatics • GPA 3.71</p>
+                <p class="text-xs text-slate-400 leading-relaxed">
+                   full stack developer.
+                </p>
+
+                <!-- Core Pills -->
+                <div class="flex flex-wrap justify-center gap-1.5 pt-2">
+                  <span class="px-2.5 py-1 text-[11px] font-mono bg-slate-800 text-slate-200 rounded-md border border-slate-700">Python</span>
+                  <span class="px-2.5 py-1 text-[11px] font-mono bg-slate-800 text-slate-200 rounded-md border border-slate-700">Scikit-learn</span>
+                  <span class="px-2.5 py-1 text-[11px] font-mono bg-slate-800 text-slate-200 rounded-md border border-slate-700">Linux / WSL</span>
+                  <span class="px-2.5 py-1 text-[11px] font-mono bg-slate-800 text-slate-200 rounded-md border border-slate-700">Flask</span>
+                  <span class="px-2.5 py-1 text-[11px] font-mono bg-slate-800 text-slate-200 rounded-md border border-slate-700">React.js</span>
+                  <span class="px-2.5 py-1 text-[11px] font-mono bg-slate-800 text-slate-200 rounded-md border border-slate-700">systemd</span>
+                </div>
+              </div>
+
+              <!-- Quick Status Footer -->
+              <div class="mt-6 pt-4 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400">
+                <span class="flex items-center gap-1.5">
+                  <span class="w-2 h-2 rounded-full bg-emerald-400"></span>
+                  Sydeco Full Stack Engineer
+                </span>
+                <a href="#contact" class="text-emerald-400 hover:underline font-medium">Contact &rarr;</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <div class="mb-12">
+        <div>
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono mb-3">
+            Selected Portfolio Works
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display">
+            Featured Projects & Engineering Work
+          </h2>
+        </div>
+      </div>
+
+
+      <!-- Projects Dynamic Grid -->
+      <div id="projects-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Injected via assets/js/main.js -->
+      </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display">
+          Experience & Education
+        </h2>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8">
+        <!-- Experience Column -->
+        <div class="lg:col-span-7 space-y-6">
+          <h3 class="text-xl font-bold text-white font-display flex items-center gap-2">
+            <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Professional Experience
+          </h3>
+
+          <!-- Sydeco Experience Card -->
+          <div class="cyber-card rounded-2xl p-6 border-l-4 border-l-emerald-500">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <h4 class="text-lg font-bold text-white">Full Stack Engineer</h4>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-emerald-500/20 text-emerald-300">13 Apr 2026 – Present</span>
+            </div>
+            <div class="text-sm font-semibold text-emerald-400 mb-4">PT. Sydeco • Yogyakarta</div>
+            <ul class="space-y-2.5 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 font-bold select-none">▹</span>
+                <span><strong>Layer 6 AI Security Engine (RitAPI):</strong> Built Python detection modules for TLS Certificate integrity, ASN Trust scoring, and JSON Schema validation. Integrated Scikit-learn anomaly scoring into ARCHANGEL 2.0 MiniFW-AI.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 font-bold select-none">▹</span>
+                <span><strong>Linux Daemon & .deb Packaging:</strong> Productionized detection scripts into Linux systemd services and managed Debian packaging pipelines for zero-downtime gateway hardware deployments.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 font-bold select-none">▹</span>
+                <span><strong>Internal Security Telemetry Dashboard:</strong> Developed a responsive Flask web application for real-time monitoring of live alerts, threat logs, and blocked IP tables.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 font-bold select-none">▹</span>
+                <span><strong>Contract Risk Analyzer (CRA):</strong> Engineered and normalized trilingual (EN, ID, FR) legal dataset enabling automated risk scoring of abusive clauses.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-400 font-bold select-none">▹</span>
+                <span><strong>Corporate Web Platform:</strong> Maintained and optimized official PT. Sydeco web platform with responsive layouts and cybersecurity product portfolios.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- DBS Foundation / Dicoding Experience Card -->
+          <div class="cyber-card rounded-2xl p-6 border-l-4 border-l-cyan-500">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <h4 class="text-lg font-bold text-white">Full Stack Developer Trainee</h4>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-cyan-500/20 text-cyan-300">16 Feb – 11 Jul 2025</span>
+            </div>
+            <div class="text-sm font-semibold text-cyan-400 mb-4">Coding Camp powered by DBS Foundation • Dicoding Indonesia</div>
+            <ul class="space-y-2 text-xs sm:text-sm text-slate-300 leading-relaxed">
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-400 font-bold select-none">▹</span>
+                <span>Completed 9 specialized full-stack engineering modules from foundational web standards to advanced enterprise architectures under Accenture curriculum.</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-cyan-400 font-bold select-none">▹</span>
+                <span>Developed <strong>RetinaScan</strong>: web-based machine learning diagnostic tool for diabetic retinopathy with React, Express, MongoDB, and Three.js 3D models.</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- PT Enggal Jaya Internship -->
+          <div class="cyber-card rounded-2xl p-6 border-l-4 border-l-slate-600">
+            <div class="flex flex-wrap items-center justify-between gap-2 mb-2">
+              <h4 class="text-lg font-bold text-white">Web Developer Intern</h4>
+              <span class="px-2.5 py-1 text-xs font-mono rounded bg-slate-800 text-slate-400">Internship</span>
+            </div>
+            <div class="text-sm font-semibold text-slate-300 mb-3">PT. Enggal Jaya</div>
+            <p class="text-xs sm:text-sm text-slate-400 leading-relaxed">
+              Developed a responsive company profile with multi-page navigation. Implemented real-time visitor analytics using Firebase Realtime Database and integrated interactive Google Maps API.
+            </p>
+          </div>
+        </div>
+
+        <!-- Education & Certifications Column -->
+        <div class="lg:col-span-5 space-y-6">
+          <h3 class="text-xl font-bold text-white font-display flex items-center gap-2">
+            <svg class="w-5 h-5 text-indigo-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 14l9-5-9-5-9 5 9 5zm0 0l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14zm-4 6v-7.5l4-2.222"/></svg>
+            Education & Honors
+          </h3>
+
+          <!-- Degree Card -->
+          <div class="cyber-card rounded-2xl p-6 border-l-4 border-l-indigo-500">
+            <div class="flex items-center justify-between mb-1">
+              <span class="text-xs font-mono text-indigo-400">2022 – 2026</span>
+              <span class="px-2.5 py-0.5 text-xs font-bold rounded-full bg-indigo-500/20 text-indigo-300 border border-indigo-500/30">GPA 3.71 / 4.00</span>
+            </div>
+            <h4 class="text-lg font-bold text-white">Bachelor of Informatics Engineering</h4>
+            <div class="text-sm text-slate-300 mb-3">Universitas Stikubank (UNISBANK) Semarang</div>
+            <div class="p-3 rounded-xl bg-slate-950/60 border border-slate-800 text-xs text-slate-300 leading-relaxed">
+              <strong class="text-emerald-400">Undergraduate Thesis:</strong> Real-Time Indonesian Sign Language (SIBI) Letter Recognition using Convolutional Neural Networks (CNN), OpenCV, and MediaPipe Hands.
+            </div>
+          </div>
+
+          <!-- Certifications Card -->
+          <div class="cyber-card rounded-2xl p-6">
+            <h4 class="text-base font-bold text-white mb-4 flex items-center gap-2">
+              <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"/></svg>
+              Certifications & Credentials
+            </h4>
+            <div class="space-y-3">
+              <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs">
+                <div class="font-semibold text-slate-200">Full Stack Developer Pathway</div>
+                <div class="text-slate-400 text-[11px] mt-0.5">DBS Foundation Coding Camp • Dicoding Indonesia & Accenture</div>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs">
+                <div class="font-semibold text-slate-200">Belajar Pengembangan Web Intermediate</div>
+                <div class="text-slate-400 text-[11px] mt-0.5">Dicoding Indonesia • Web Components, Camera API, Geo Location</div>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs">
+                <div class="font-semibold text-slate-200">Belajar Back-End Pemula dengan JavaScript</div>
+                <div class="text-slate-400 text-[11px] mt-0.5">Dicoding Indonesia • Node.js, Hapi/Express RESTful APIs</div>
+              </div>
+              <div class="p-3 rounded-xl bg-slate-900/80 border border-slate-800 text-xs">
+                <div class="font-semibold text-slate-200">Belajar Dasar Pemrograman JavaScript & Web</div>
+                <div class="text-slate-400 text-[11px] mt-0.5">Dicoding Indonesia • Core Language Standards & DOM</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technical Skills Matrix -->
+    <section id="skills" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-mono mb-3">
+          Full Technical Capabilities
+        </div>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white font-display">
+          Technical Skills & Tooling
+        </h2>
+        <p class="text-slate-400 text-sm sm:text-base mt-2">
+          Technologies and tools I leverage to build performant, resilient, and secure applications.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- AI, Machine Learning & Vision -->
+        <div class="cyber-card rounded-2xl p-6 flex flex-col">
+          <div class="w-12 h-12 rounded-xl bg-purple-500/10 border border-purple-500/30 flex items-center justify-center text-purple-400 mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">AI, ML & Computer Vision</h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+            Hands-on machine learning architectures for anomaly detection, real-time gesture tracking, and medical image inference.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-purple-300 rounded-md border border-purple-500/20">Scikit-learn</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-purple-300 rounded-md border border-purple-500/20">TensorFlow / Keras</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-purple-300 rounded-md border border-purple-500/20">OpenCV</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-purple-300 rounded-md border border-purple-500/20">MediaPipe Hands</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-purple-300 rounded-md border border-purple-500/20">NumPy</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-purple-300 rounded-md border border-purple-500/20">Pandas</span>
+          </div>
+        </div>
+
+        <!-- Programming Languages -->
+        <div class="cyber-card rounded-2xl p-6 flex flex-col">
+          <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Programming Languages</h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+            Core languages used for building low-latency backend engines, detection scripts, and dynamic web user interfaces.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-emerald-300 rounded-md border border-emerald-500/20">Python (FastAPI / Flask)</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-emerald-300 rounded-md border border-emerald-500/20">JavaScript (ES6+)</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-emerald-300 rounded-md border border-emerald-500/20">SQL (PostgreSQL / MySQL)</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-emerald-300 rounded-md border border-emerald-500/20">HTML5 & Semantic CSS</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-emerald-300 rounded-md border border-emerald-500/20">Bash Shell Scripting</span>
+          </div>
+        </div>
+
+        <!-- Systems & Infrastructure -->
+        <div class="cyber-card rounded-2xl p-6 flex flex-col">
+          <div class="w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/30 flex items-center justify-center text-cyan-400 mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Systems, Linux & DevOps</h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+            Linux gateway hardware deployment, service daemonization, and package distribution pipelines.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-cyan-300 rounded-md border border-cyan-500/20">Linux (Ubuntu / WSL)</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-cyan-300 rounded-md border border-cyan-500/20">systemd Daemons</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-cyan-300 rounded-md border border-cyan-500/20">Debian (.deb) Packaging</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-cyan-300 rounded-md border border-cyan-500/20">Docker</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-cyan-300 rounded-md border border-cyan-500/20">Git & GitHub Actions</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-cyan-300 rounded-md border border-cyan-500/20">nftables & YARA</span>
+          </div>
+        </div>
+
+        <!-- Backend Engineering & APIs -->
+        <div class="cyber-card rounded-2xl p-6 flex flex-col">
+          <div class="w-12 h-12 rounded-xl bg-amber-500/10 border border-amber-500/30 flex items-center justify-center text-amber-400 mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Backend & Security Engineering</h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+            Designing resilient REST APIs, telemetry dashboards, and Layer 6 packet inspection protocols.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-amber-300 rounded-md border border-amber-500/20">Flask & Jinja2</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-amber-300 rounded-md border border-amber-500/20">Node.js & Express.js</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-amber-300 rounded-md border border-amber-500/20">JSON Schema Validation</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-amber-300 rounded-md border border-amber-500/20">TLS / ASN Scoring</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-amber-300 rounded-md border border-amber-500/20">RESTful Architecture</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-amber-300 rounded-md border border-amber-500/20">MongoDB & Firebase</span>
+          </div>
+        </div>
+
+        <!-- Frontend & UI/UX -->
+        <div class="cyber-card rounded-2xl p-6 flex flex-col">
+          <div class="w-12 h-12 rounded-xl bg-blue-500/10 border border-blue-500/30 flex items-center justify-center text-blue-400 mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Frontend & Visualizations</h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+            Crafting responsive, high-performance web interfaces with interactive 3D elements and telemetry charts.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-blue-300 rounded-md border border-blue-500/20">React.js</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-blue-300 rounded-md border border-blue-500/20">Tailwind CSS</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-blue-300 rounded-md border border-blue-500/20">Three.js (3D Graphics)</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-blue-300 rounded-md border border-blue-500/20">Chart.js Telemetry</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-blue-300 rounded-md border border-blue-500/20">Bootstrap 5</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-blue-300 rounded-md border border-blue-500/20">Leaflet Maps</span>
+          </div>
+        </div>
+
+        <!-- Methodologies & Core Strengths -->
+        <div class="cyber-card rounded-2xl p-6 flex flex-col">
+          <div class="w-12 h-12 rounded-xl bg-pink-500/10 border border-pink-500/30 flex items-center justify-center text-pink-400 mb-4">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h3 class="text-lg font-bold text-white mb-2">Core Engineering Values</h3>
+          <p class="text-xs text-slate-400 mb-4 leading-relaxed">
+            Rigorous engineering standards focused on stability, defensive programming, and measurable business impact.
+          </p>
+          <div class="flex flex-wrap gap-2 mt-auto">
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-pink-300 rounded-md border border-pink-500/20">Zero-Downtime Deploy</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-pink-300 rounded-md border border-pink-500/20">Dataset Normalization</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-pink-300 rounded-md border border-pink-500/20">Defensive Validation</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-pink-300 rounded-md border border-pink-500/20">Clean Code & Git Flow</span>
+            <span class="px-2.5 py-1 text-xs font-mono bg-slate-800 text-pink-300 rounded-md border border-pink-500/20">Cross-Platform Testing</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-slate-800/80">
+
+      <!-- Contact Channels Grid -->
+      <div class="max-w-5xl mx-auto grid sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
+        <!-- Email Card -->
+        <div class="cyber-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <span class="text-xs font-mono text-slate-400 block uppercase tracking-wider">Email Address</span>
+            <h3 class="text-base font-bold text-white mt-1 break-all">Ilhamwahyu0987@gmail.com</h3>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800 flex items-center gap-2">
+            <a href="mailto:Ilhamwahyu0987@gmail.com" class="flex-1 text-center py-2 px-3 rounded-xl text-xs font-bold bg-emerald-500 hover:bg-emerald-400 text-dark-950 transition-all">
+              Send Email
+            </a>
+            <button onclick="copyEmailToClipboard()" class="p-2 rounded-xl bg-slate-800 hover:bg-slate-700 text-slate-300 hover:text-emerald-400 transition-all border border-slate-700" title="Copy Email">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 5H6a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2v-1M8 5a2 2 0 002 2h2a2 2 0 002-2M8 5a2 2 0 012-2h2a2 2 0 012 2m0 0h2a2 2 0 012 2v3m2 4H10m0 0l3-3m-3 3l3 3"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <!-- WhatsApp Card -->
+        <div class="cyber-card rounded-2xl p-6 flex flex-col justify-between">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/30 flex items-center justify-center text-emerald-400 mb-4">
+              <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0012.04 2zm0 18.15c-1.49 0-2.95-.4-4.22-1.16l-.3-.18-3.13.82.83-3.05-.2-.31a8.165 8.165 0 01-1.25-4.36c0-4.52 3.68-8.2 8.2-8.2 2.19 0 4.25.85 5.8 2.4 1.55 1.55 2.4 3.61 2.4 5.8 0 4.52-3.68 8.2-8.2 8.2zm4.49-6.14c-.25-.12-1.46-.72-1.69-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.5.11-.11.25-.29.37-.43.12-.14.17-.25.25-.41.08-.17.04-.31-.02-.43s-.56-1.34-.76-1.84c-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.23.25-.87.85-.87 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.23 3.74.59.26 1.05.41 1.41.53.59.19 1.13.16 1.56.1.48-.07 1.46-.6 1.67-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.18-.47-.3z"/></svg>
+            </div>
+            <span class="text-xs font-mono text-slate-400 block uppercase tracking-wider">WhatsApp Direct</span>
+            <h3 class="text-base font-bold text-white mt-1">+62 878-6015-2435</h3>
+          </div>
+
+          <div class="pt-6 mt-6 border-t border-slate-800">
+            <a href="https://wa.me/6287860152435" target="_blank" rel="noopener noreferrer" 
+               class="w-full inline-flex items-center justify-center gap-2 py-2.5 px-3 rounded-xl text-xs font-bold bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 transition-all">
+              <span>Start WhatsApp Chat</span>
+              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Social & Resume Card -->
+        <div class="cyber-card rounded-2xl p-6 flex flex-col justify-between sm:col-span-2 lg:col-span-1">
+          <div>
+            <div class="w-12 h-12 rounded-xl bg-indigo-500/10 border border-indigo-500/30 flex items-center justify-center text-indigo-400 mb-4">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+            </div>
+            <span class="text-xs font-mono text-slate-400 block uppercase tracking-wider">Profiles & Resume</span>
+            <h3 class="text-base font-bold text-white mt-1">Connect Online</h3>
+          </div>
+
+          <div class="pt-4 mt-6 border-t border-slate-800 space-y-2">
+            <a href="https://linkedin.com/in/ilham-wahyu-saputro" target="_blank" rel="noopener noreferrer" 
+               class="w-full flex items-center justify-between p-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 text-xs transition-colors">
+              <span class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-blue-400" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn</span>
+              </span>
+              <span class="text-slate-500 font-mono">&rarr;</span>
+            </a>
+
+            <a href="https://github.com/ilhamws" target="_blank" rel="noopener noreferrer" 
+               class="w-full flex items-center justify-between p-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-slate-200 text-xs transition-colors">
+              <span class="flex items-center gap-2">
+                <svg class="w-4 h-4 text-slate-300" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </span>
+              <span class="text-slate-500 font-mono">&rarr;</span>
+            </a>
+
+            <a href="CV_Ilham_Wahyu_Saputro.pdf" download 
+               class="w-full flex items-center justify-between p-2 rounded-xl bg-slate-900/80 hover:bg-slate-800 text-emerald-400 text-xs font-semibold transition-colors">
+              <span class="flex items-center gap-2">
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                <span>Download Resume</span>
+              </span>
+              <span class="text-emerald-500 font-mono">&darr;</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <div class="w-8 h-8 rounded-lg bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-mono font-bold text-xs border border-emerald-500/30">
+          IW
+        </div>
+      </div>
+
+      <div class="flex items-center gap-6 text-xs text-slate-400 font-mono">
+        <a href="#hero" class="hover:text-emerald-400 transition-colors">Back to Top &uarr;</a>
+        <a href="https://github.com/ilhamws" target="_blank" class="hover:text-emerald-400 transition-colors">GitHub</a>
+        <a href="https://linkedin.com/in/ilham-wahyu-saputro" target="_blank" class="hover:text-emerald-400 transition-colors">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Floating Toast Notification -->
+  <div id="toast" class="fixed bottom-8 right-8 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="flex items-center gap-2.5 px-4 py-3 rounded-xl bg-slate-900 text-white border border-emerald-500/50 shadow-2xl text-xs font-mono">
+      <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+      <span id="toast-msg">Email copied to clipboard!</span>
+    </div>
+  </div>
+
+  <!-- Project Deep-Dive Modal -->
+  <div id="project-modal" class="fixed inset-0 z-50 modal-backdrop bg-slate-950/80 flex items-center justify-center p-4 hidden">
+    <div class="relative w-full max-w-3xl cyber-card rounded-3xl overflow-hidden shadow-2xl max-h-[90vh] flex flex-col border border-slate-700" onclick="event.stopPropagation()">
+      <button onclick="closeProjectModal()" class="absolute top-5 right-5 z-10 w-9 h-9 rounded-full bg-slate-800/90 hover:bg-slate-700 text-slate-300 hover:text-white flex items-center justify-center transition-colors" aria-label="Close modal">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+      </button>
+
+      <div id="modal-inner-content" class="flex flex-col flex-1 overflow-hidden">
+        <!-- Injected via openProjectModal() in main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="fixed bottom-8 left-8 z-40 p-3 rounded-full bg-slate-800/90 hover:bg-emerald-500 text-slate-300 hover:text-slate-950 border border-slate-700 shadow-xl opacity-0 pointer-events-none translate-y-4 transition-all duration-300" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
+  <!-- Application Scripts -->
+  <script src="assets/js/projects-data.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

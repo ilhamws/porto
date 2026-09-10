@@ -1,0 +1,18 @@
+{
+  "name": "ilham-portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio of Ilham Wahyu Saputro - Full Stack Developer & AI Systems Engineer",
+  "scripts": {
+    "dev": "python3 -m http.server 3000 || npx serve -p 3000 .",
+    "start": "python3 -m http.server 3000 || npx serve -p 3000 ."
+  },
+  "keywords": [
+    "portfolio",
+    "full-stack",
+    "ai",
+    "security",
+    "machine-learning"
+  ],
+  "author": "Ilham Wahyu Saputro <Ilhamwahyu0987@gmail.com>",
+  "license": "MIT"
+}
