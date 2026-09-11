@@ -59,7 +59,7 @@ const projectsData = [
     id: "sibi-gesture",
     title: "Real-Time SIBI Sign Language Recognition",
     category: ["ml"],
-    badge: "Undergraduate Thesis (GPA 3.71)",
+    badge: "Undergraduate Thesis (GPA 3.77)",
     featured: true,
     metric: "Deep Learning + Computer Vision",
     imageAccent: "from-purple-500/20 via-pink-500/10 to-transparent",

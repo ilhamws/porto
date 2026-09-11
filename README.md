@@ -8,7 +8,7 @@
 
 - **Live AI Security & Gate Simulator**: Interactive demonstration of Layer 6 inspection, TLS handshake validation, ASN scoring, and Scikit-learn anomaly detection (inspired by RitAPI & MiniFW-AI at PT. Sydeco).
 - **Comprehensive Project Showcase**: Filterable showcase covering Enterprise Cybersecurity, Computer Vision (SIBI Thesis), Medical ML (RetinaScan), and Full-Stack Web Applications with interactive deep-dive modals.
-- **Career & Academic Timeline**: PT. Sydeco, DBS Foundation Coding Camp (Dicoding), PT. Enggal Jaya, and Universitas Stikubank (GPA: 3.71).
+- **Career & Academic Timeline**: PT. Sydeco, DBS Foundation Coding Camp (Dicoding), PT. Enggal Jaya, and Universitas Stikubank (GPA: 3.77).
 - **Interactive UI/UX**: Dark cyber-glassmorphic aesthetic, 1-click email copy with toast feedback, direct WhatsApp routing, resume download, and responsive layout for mobile, tablet, and desktop.
 
 ---
@@ -38,7 +38,7 @@ npm start
 .
 ├── index.html                     # Semantic, responsive HTML5 with Tailwind CSS
 ├── profile.jpg                    # Ilham Wahyu Saputro's profile photo
-├── CV_Ilham_Wahyu_Saputro.pdf     # Downloadable resume
+├── CV_Ilham_Wahyu_Saputro_.pdf    # Downloadable resume
 ├── package.json                   # Project metadata & start scripts
 ├── README.md                      # Documentation
 └── assets/
