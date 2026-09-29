@@ -233,18 +233,18 @@ body {
     font-size: 16pt !important;
     font-weight: 800 !important;
     line-height: 1.15 !important;
-    color: #0f172a !important;
+    color: #000000 !important;
     margin: 0 0 2pt 0 !important;
   }
 
   #hero h1 span {
-    color: #0f172a !important;
+    color: #000000 !important;
   }
 
   #hero p.font-medium {
     font-size: 9.5pt !important;
     font-weight: 700 !important;
-    color: #4338ca !important;
+    color: #000000 !important;
     margin: 0 0 3pt 0 !important;
   }
 
