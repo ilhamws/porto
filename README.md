@@ -1,69 +1,48 @@
-# Ilham Wahyu Saputro — Personal Portfolio Website
+# Ilham Wahyu Saputro – Modern Portfolio Website
 
-> Full Stack Developer & AI Systems Engineer specializing in Layer 6 API Security, Real-Time Anomaly Detection, Machine Learning & Modern Web Applications.
+A clean, modern, responsive portfolio website built with semantic HTML5, modern Tailwind CSS, and vanilla JavaScript.
 
----
+## Features
+- **Design & UI**: Minimalist modern aesthetics, glassmorphism, responsive grid, custom typography (`Plus Jakarta Sans` & `JetBrains Mono`).
+- **Theme Toggle**: Seamless Light & Dark mode support with `localStorage` persistence and system color-scheme detection.
+- **Projects Showcase & Case Study Modals**: Interactive filtering (`All`, `AI & Vision`, `Security & Systems`, `Full Stack & Web`) with rich modal detail cards.
+- **Interactive Actions**:
+  - 1-click clipboard copy for Email and Phone with instant visual feedback badge.
+  - Direct WhatsApp chat button (`wa.me`).
+  - CV Print & PDF export ready (`window.print()` with dedicated print stylesheet).
+  - Pre-formatted contact form with automated mail client invocation.
+- **Performance**: Zero build-step dependencies required. Can be opened directly in any browser or hosted instantly on GitHub Pages, Vercel, or Netlify.
 
-## 🌟 Overview & Highlights
-
-- **Live AI Security & Gate Simulator**: Interactive demonstration of Layer 6 inspection, TLS handshake validation, ASN scoring, and Scikit-learn anomaly detection (inspired by RitAPI & MiniFW-AI at PT. Sydeco).
-- **Comprehensive Project Showcase**: Filterable showcase covering Enterprise Cybersecurity, Computer Vision (SIBI Thesis), Medical ML (RetinaScan), and Full-Stack Web Applications with interactive deep-dive modals.
-- **Career & Academic Timeline**: PT. Sydeco, DBS Foundation Coding Camp (Dicoding), PT. Enggal Jaya, and Universitas Stikubank (GPA: 3.77).
-- **Interactive UI/UX**: Dark cyber-glassmorphic aesthetic, 1-click email copy with toast feedback, direct WhatsApp routing, resume download, and responsive layout for mobile, tablet, and desktop.
-
----
-
-## 🚀 Quick Start / Local Preview
-
-### Method 1: Direct Double-Click
-Simply open `index.html` in your favorite web browser (Chrome, Edge, Firefox).
-
-### Method 2: Lightweight Local Server
-Using Python (built-in):
-```bash
-python3 -m http.server 3000
+## Structure
 ```
-Then visit: `http://localhost:3000`
-
-Using npm:
-```bash
-npm start
+/
+├── index.html                  # Main portfolio semantic document
+├── assets/
+│   ├── css/
+│   │   └── style.css           # Glassmorphism, animations, print media rules
+│   └── js/
+│       ├── projects-data.js    # Structured project records & case studies
+│       └── main.js             # Filters, theme manager, modal, clipboard, form
+├── CV_Ilham_Wahyu_Saputro.docx # Original CV document
+└── README.md
 ```
 
----
+## How to View
+- **Direct in browser**: Double-click [index.html](file:///mnt/c/porto/index.html) or open `C:\porto\index.html` in your browser.
+- **Local HTTP Server**:
+  ```bash
+  python3 -m http.server 8000
+  ```
+  Then open `http://localhost:8000` in your browser.
 
-## 📁 Project Structure
-
-```
-.
-├── index.html                     # Semantic, responsive HTML5 with Tailwind CSS
-├── profile.jpg                    # Ilham Wahyu Saputro's profile photo
-├── CV_Ilham_Wahyu_Saputro_.pdf    # Downloadable resume
-├── package.json                   # Project metadata & start scripts
-├── README.md                      # Documentation
-└── assets/
-    ├── css/
-    │   └── style.css              # Custom cyber styling, glassmorphism & keyframes
-    └── js/
-        ├── main.js                # Dynamic filtering, modals, copy toast, contact routing
-        ├── projects-data.js       # Complete project catalog & architectural metadata
-        └── terminal-simulator.js  # Interactive RitAPI & MiniFW-AI simulation logic
-```
-
----
-
-## 🌐 Deploying to GitHub Pages
-
-1. Initialize git (if not already initialized):
+## Deployment to GitHub Pages
+1. Initialize git and push to your GitHub repository:
    ```bash
    git init
    git add .
-   git commit -m "feat: portfolio website with interactive AI simulator"
-   ```
-2. Push to your GitHub repository (e.g., `https://github.com/ilhamws/ilhamws.github.io`):
-   ```bash
-   git remote add origin https://github.com/ilhamws/ilhamws.github.io.git
+   git commit -m "Initial portfolio commit"
    git branch -M main
+   git remote add origin https://github.com/ilhamws/portfolio.git
    git push -u origin main
    ```
-3. Enable GitHub Pages in repository Settings &rarr; Pages &rarr; Source: `Deploy from a branch` (`main` / root).
+2. In GitHub repository settings, go to **Settings > Pages** and set source to the `main` branch.
