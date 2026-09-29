@@ -9,6 +9,12 @@
 html {
   scroll-behavior: smooth;
   font-family: var(--font-sans);
+  background-color: #ffffff;
+}
+
+body {
+  background-color: #ffffff;
+  color: #0f172a;
 }
 
 /* Custom Scrollbar */

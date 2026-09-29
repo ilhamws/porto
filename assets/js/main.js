@@ -11,27 +11,10 @@ document.addEventListener('DOMContentLoaded', () => {
   setupContactForm();
 });
 
-// Theme Management
+// Theme Management - Enforce light theme
 function initTheme() {
-  const toggleBtn = document.getElementById('theme-toggle');
-  const mobileToggleBtn = document.getElementById('theme-toggle-mobile');
-  
-  const savedTheme = localStorage.getItem('theme');
-  const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  if (savedTheme === 'dark' || (!savedTheme && prefersDark)) {
-    document.documentElement.classList.add('dark');
-  } else {
-    document.documentElement.classList.remove('dark');
-  }
-  
-  const toggleAction = () => {
-    const isDark = document.documentElement.classList.toggle('dark');
-    localStorage.setItem('theme', isDark ? 'dark' : 'light');
-  };
-
-  if (toggleBtn) toggleBtn.addEventListener('click', toggleAction);
-  if (mobileToggleBtn) mobileToggleBtn.addEventListener('click', toggleAction);
+  localStorage.setItem('theme', 'light');
+  document.documentElement.classList.remove('dark');
 }
 
 // Icon mapper helper
