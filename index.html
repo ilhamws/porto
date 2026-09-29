@@ -44,7 +44,22 @@
   </script>
 
   <!-- Custom Stylesheet -->
-  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css?v=20260929-3">
+  <style>
+    @media print {
+      #hero h1,
+      #hero h1 span,
+      #hero p.font-medium,
+      h2.font-mono,
+      #experience p.font-semibold,
+      #experience li span.text-indigo-500,
+      #projects-grid article p.font-medium,
+      #education p.font-semibold {
+        color: #000000 !important;
+        -webkit-text-fill-color: #000000 !important;
+      }
+    }
+  </style>
 </head>
 
 <body class="bg-white text-slate-900 min-h-screen transition-colors duration-300 antialiased selection:bg-indigo-500 selection:text-white">
@@ -133,7 +148,7 @@
               Hi, I'm <span class="text-black dark:text-white">Ilham Wahyu Saputro</span>
             </h1>
 
-            <p class="mt-4 text-xl sm:text-2xl font-medium text-black dark:text-white tracking-tight">
+            <p class="mt-4 text-xl sm:text-2xl font-medium text-black dark:text-white tracking-tight" style="color: #000000 !important; -webkit-text-fill-color: #000000 !important;">
               Full Stack Developer & AI / Machine Learning Integrator
             </p>
 
