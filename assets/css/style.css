@@ -188,7 +188,7 @@ body {
   h2.font-mono {
     font-size: 7pt !important;
     letter-spacing: 0.08em !important;
-    color: #000000 !important;
+    color: #4338ca !important;
     margin-bottom: 1pt !important;
     font-weight: 700 !important;
   }
@@ -233,18 +233,18 @@ body {
     font-size: 16pt !important;
     font-weight: 800 !important;
     line-height: 1.15 !important;
-    color: #000000 !important;
+    color: #0f172a !important;
     margin: 0 0 2pt 0 !important;
   }
 
   #hero h1 span {
-    color: #000000 !important;
+    color: #0f172a !important;
   }
 
   #hero p.font-medium {
     font-size: 9.5pt !important;
     font-weight: 700 !important;
-    color: #000000 !important;
+    color: #4338ca !important;
     margin: 0 0 3pt 0 !important;
   }
 
@@ -434,7 +434,7 @@ body {
   #experience p.font-semibold.text-indigo-600 {
     font-size: 8pt !important;
     font-weight: 700 !important;
-    color: #000000 !important;
+    color: #4338ca !important;
     margin: 0.5pt 0 0.5pt 0 !important;
   }
 
@@ -466,7 +466,7 @@ body {
   }
 
   #experience li span.text-indigo-500 {
-    color: #000000 !important;
+    color: #4338ca !important;
   }
 
   #experience .mt-4.pt-3.border-t {
@@ -552,7 +552,7 @@ body {
   #projects-grid article p.text-xs.font-medium {
     font-size: 7.2pt !important;
     font-weight: 600 !important;
-    color: #000000 !important;
+    color: #4338ca !important;
     margin: 0.5pt 0 1.5pt 0 !important;
   }
 
@@ -690,7 +690,7 @@ body {
   #education p.text-indigo-600 {
     font-size: 7.5pt !important;
     font-weight: 600 !important;
-    color: #000000 !important;
+    color: #4338ca !important;
   }
 
   #education p.font-medium {
