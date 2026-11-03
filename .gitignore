@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+dist/
+
+# OS and Temporary Files
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
+
+# Editor configurations
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Downloaded files
+*.pdf
