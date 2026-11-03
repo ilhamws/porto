@@ -66,7 +66,7 @@ export const Navbar: React.FC = () => {
         <div className="flex items-center gap-2.5">
           {/* CV Download */}
           <a
-            href="/CV_Ilham_Wahyu_Saputro.pdf"
+            href={`${import.meta.env.BASE_URL}CV_Ilham_Wahyu_Saputro.pdf`}
             download
             className="hidden sm:inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-medium text-zinc-300 bg-zinc-900 hover:bg-zinc-800 border border-zinc-800 hover:border-zinc-700 transition-all"
           >
@@ -111,7 +111,7 @@ export const Navbar: React.FC = () => {
           ))}
           <div className="pt-2 border-t border-zinc-800">
             <a
-              href="/CV_Ilham_Wahyu_Saputro.pdf"
+              href={`${import.meta.env.BASE_URL}CV_Ilham_Wahyu_Saputro.pdf`}
               download
               className="block text-center py-2 rounded-lg text-xs font-medium text-zinc-300 bg-zinc-900 border border-zinc-800"
             >

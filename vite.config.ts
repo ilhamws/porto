@@ -7,6 +7,7 @@ import { fileURLToPath } from "node:url";
 const rootDir = fileURLToPath(new URL(".", import.meta.url)).replace(/\\/g, "/");
 
 export default defineConfig({
+  base: "/porto/",
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {

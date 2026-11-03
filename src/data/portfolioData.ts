@@ -50,7 +50,7 @@ export const PERSONAL_INFO = {
   whatsappUrl: "https://wa.me/6287860152435",
   linkedinUrl: "https://linkedin.com/in/ilham-wahyu-saputro",
   githubUrl: "https://github.com/ilhamws",
-  profileImg: "/pose.png",
+  profileImg: `${import.meta.env.BASE_URL}pose.png`,
   status: "Available for Full-time, Projects, & Remote",
 };
 
