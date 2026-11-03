@@ -218,28 +218,6 @@ export const ContactSection: React.FC = () => {
             </div>
           </div>
         </div>
-
-        {/* Central Prominent CTA Bar */}
-        <div className="mt-12 text-center">
-          <div className="inline-flex flex-wrap items-center justify-center gap-3 p-1.5 rounded-xl bg-zinc-900 border border-zinc-800">
-            <a
-              href={PERSONAL_INFO.whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium text-xs text-zinc-950 bg-zinc-100 hover:bg-white shadow-sm transition-all"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>Message on WhatsApp</span>
-            </a>
-            <a
-              href={`mailto:${PERSONAL_INFO.email}`}
-              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg font-medium text-xs text-zinc-300 hover:text-white hover:bg-zinc-800 transition-all font-mono"
-            >
-              <Mail className="w-3.5 h-3.5 text-zinc-500" />
-              <span>{PERSONAL_INFO.email}</span>
-            </a>
-          </div>
-        </div>
       </div>
     </section>
   );

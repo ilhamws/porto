@@ -272,14 +272,13 @@ export const EXPERIENCES: ExperienceItem[] = [
   {
     number: 4,
     period: "2022 – 2026",
-    role: "Organization & Leadership",
-    company: "Universitas Stikubank & BriComp",
-    division: "Student Association & Community",
+    role: "Organization",
+    company: "Universitas Stikubank",
+    division: "S1 Informatics Engineering",
     highlights: [
-      "Active leadership in student association, coordinating campus technical events, workshops, and student programming hackathons.",
-      "Managed digital presence, user engagement campaigns, and community communications at BriComp."
+      "Active in organizations and participating in training programs"
     ],
-    skills: ["Leadership", "Community Management", "Event Coordination", "Technical Workshops"]
+    skills: []
   }
 ];
 
@@ -297,7 +296,6 @@ export const SKILL_CATEGORIES = [
     category: "Frameworks & Frontend",
     skills: [
       { name: "React 19 & Next.js", level: "Advanced", detail: "Hooks, Router, Vite, Tailwind v4" },
-      { name: "Motion & Aceternity UI", level: "Production", detail: "Framer Motion, 3D, Micro-interactions" },
       { name: "Node.js & Express.js", level: "Backend Services", detail: "REST APIs, Auth, Middleware" },
       { name: "Three.js", level: "3D Graphics", detail: "Interactive anatomical models" }
     ]

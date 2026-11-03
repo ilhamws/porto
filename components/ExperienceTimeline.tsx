@@ -48,28 +48,38 @@ export const ExperienceTimeline: React.FC = () => {
 
               {/* Right Column / Content Card */}
               <div className="pl-10 md:pl-12 md:w-1/2 mt-3 md:mt-0 w-full">
-                <div className="p-6 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-zinc-700 transition-all duration-300">
-                  <ul className="space-y-2.5 text-xs text-zinc-400 font-normal leading-relaxed">
-                    {item.highlights.map((highlight, idx) => (
-                      <li key={idx} className="flex items-start gap-2">
-                        <span className="text-zinc-600 select-none mt-0.5">―</span>
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
+                {(item.highlights.length > 0 || item.skills.length > 0) && (
+                  <div className="p-6 rounded-2xl bg-zinc-900/40 border border-zinc-800/80 hover:border-zinc-700 transition-all duration-300">
+                    {item.highlights.length > 0 && (
+                      <ul className="space-y-2.5 text-xs text-zinc-400 font-normal leading-relaxed">
+                        {item.highlights.map((highlight, idx) => (
+                          <li key={idx} className="flex items-start gap-2">
+                            <span className="text-zinc-600 select-none mt-0.5">―</span>
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    )}
 
-                  {/* Skills badges */}
-                  <div className="mt-5 pt-3.5 border-t border-zinc-800/60 flex flex-wrap gap-1.5">
-                    {item.skills.map((skill) => (
-                      <span
-                        key={skill}
-                        className="text-[11px] font-mono px-2 py-0.5 rounded bg-zinc-900/90 text-zinc-400 border border-zinc-800"
+                    {/* Skills badges */}
+                    {item.skills.length > 0 && (
+                      <div
+                        className={`${
+                          item.highlights.length > 0 ? "mt-5 pt-3.5 border-t border-zinc-800/60" : ""
+                        } flex flex-wrap gap-1.5`}
                       >
-                        {skill}
-                      </span>
-                    ))}
+                        {item.skills.map((skill) => (
+                          <span
+                            key={skill}
+                            className="text-[11px] font-mono px-2 py-0.5 rounded bg-zinc-900/90 text-zinc-400 border border-zinc-800"
+                          >
+                            {skill}
+                          </span>
+                        ))}
+                      </div>
+                    )}
                   </div>
-                </div>
+                )}
               </div>
             </div>
           ))}
