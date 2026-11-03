@@ -131,22 +131,6 @@ export const Hero: React.FC = () => {
                   alt={PERSONAL_INFO.name}
                   className="w-full max-w-[360px] sm:max-w-[420px] lg:max-w-[480px] xl:max-w-[520px] h-auto object-contain object-bottom drop-shadow-[0_25px_50px_rgba(0,0,0,0.95)] group-hover:scale-[1.015] transition-transform duration-500 ease-out"
                 />
-
-                {/* Floating Bottom Card Over lower torso */}
-                <div className="w-full max-w-[320px] -mt-6 sm:-mt-8 relative z-20 p-3 rounded-xl bg-zinc-900/85 backdrop-blur-md border border-zinc-800/80 flex items-center justify-between shadow-2xl">
-                  <div>
-                    <span className="text-xs font-semibold text-zinc-200 block">
-                      Full Stack Developer
-                    </span>
-                    <span className="text-[11px] text-zinc-400 font-mono block">
-                      Semarang, Indonesia
-                    </span>
-                  </div>
-                  <div className="flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/10 border border-emerald-500/30 text-[10px] font-mono text-emerald-400">
-                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-                    <span>Active</span>
-                  </div>
-                </div>
               </div>
             </div>
           </div>
