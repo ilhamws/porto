@@ -1,5 +1,5 @@
 import React from "react";
-import { EXPERIENCES } from "@/src/data/portfolioData";
+import { EXPERIENCES } from "../src/data/portfolioData";
 import { Calendar } from "lucide-react";
 
 export const ExperienceTimeline: React.FC = () => {

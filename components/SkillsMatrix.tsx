@@ -1,5 +1,5 @@
 import React from "react";
-import { SKILL_CATEGORIES } from "@/src/data/portfolioData";
+import { SKILL_CATEGORIES } from "../src/data/portfolioData";
 import { Code, Layout, Cpu, Server } from "lucide-react";
 
 export const SkillsMatrix: React.FC = () => {

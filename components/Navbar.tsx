@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Download, MessageCircle, Menu, X } from "lucide-react";
-import { PERSONAL_INFO } from "@/src/data/portfolioData";
+import { PERSONAL_INFO } from "../src/data/portfolioData";
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);

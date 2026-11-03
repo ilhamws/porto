@@ -1,13 +1,13 @@
 import React, { useState } from "react";
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import { PERSONAL_INFO } from "@/src/data/portfolioData";
+import { BackgroundBeams } from "./ui/background-beams";
+import { PERSONAL_INFO } from "../src/data/portfolioData";
 import {
   Copy,
   Check,
   Mail,
   Phone,
 } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons/SocialIcons";
+import { GithubIcon, LinkedinIcon } from "./icons/SocialIcons";
 
 export const Hero: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);

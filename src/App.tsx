@@ -1,11 +1,11 @@
 import React from "react";
-import { Navbar } from "@/components/Navbar";
-import { Hero } from "@/components/Hero";
-import { ProjectsBento } from "@/components/ProjectsBento";
-import { ExperienceTimeline } from "@/components/ExperienceTimeline";
-import { SkillsMatrix } from "@/components/SkillsMatrix";
-import { ContactSection } from "@/components/ContactSection";
-import { Footer } from "@/components/Footer";
+import { Navbar } from "../components/Navbar";
+import { Hero } from "../components/Hero";
+import { ProjectsBento } from "../components/ProjectsBento";
+import { ExperienceTimeline } from "../components/ExperienceTimeline";
+import { SkillsMatrix } from "../components/SkillsMatrix";
+import { ContactSection } from "../components/ContactSection";
+import { Footer } from "../components/Footer";
 
 export default function App() {
   return (

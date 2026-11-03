@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { PERSONAL_INFO } from "@/src/data/portfolioData";
+import { PERSONAL_INFO } from "../src/data/portfolioData";
 import {
   Mail,
   Phone,
@@ -8,7 +8,7 @@ import {
   Check,
   ArrowUpRight
 } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "@/components/icons/SocialIcons";
+import { GithubIcon, LinkedinIcon } from "./icons/SocialIcons";
 
 export const ContactSection: React.FC = () => {
   const [copiedEmail, setCopiedEmail] = useState(false);

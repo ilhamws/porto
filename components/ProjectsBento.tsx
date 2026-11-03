@@ -1,6 +1,6 @@
 import React, { useState } from "react";
-import { PROJECTS, Project } from "@/src/data/portfolioData";
-import { ProjectModal } from "@/components/ProjectModal";
+import { PROJECTS, Project } from "../src/data/portfolioData";
+import { ProjectModal } from "./ProjectModal";
 import {
   ExternalLink,
   ArrowUpRight,
@@ -11,7 +11,7 @@ import {
   FileText,
   Globe
 } from "lucide-react";
-import { GithubIcon } from "@/components/icons/SocialIcons";
+import { GithubIcon } from "./icons/SocialIcons";
 
 export const ProjectsBento: React.FC = () => {
   const [filter, setFilter] = useState<"all" | "ai" | "fullstack" | "security">("all");

@@ -1,5 +1,5 @@
 import React from "react";
-import { PERSONAL_INFO } from "@/src/data/portfolioData";
+import { PERSONAL_INFO } from "../src/data/portfolioData";
 import { ArrowUp } from "lucide-react";
 
 export const Footer: React.FC = () => {

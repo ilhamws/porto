@@ -1,7 +1,7 @@
 import React from "react";
-import { Project } from "@/src/data/portfolioData";
+import { Project } from "../src/data/portfolioData";
 import { X, ExternalLink, CheckCircle, Code2 } from "lucide-react";
-import { GithubIcon } from "@/components/icons/SocialIcons";
+import { GithubIcon } from "./icons/SocialIcons";
 
 interface ProjectModalProps {
   project: Project | null;
