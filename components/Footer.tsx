@@ -15,36 +15,38 @@ export const Footer: React.FC = () => {
             {PERSONAL_INFO.name}
           </span>
           <span className="font-mono text-zinc-500 mt-0.5 block text-[11px]">
-            Full Stack Developer • {new Date().getFullYear()}
+            Full Stack Developer & Full Stack Engineer • {new Date().getFullYear()}
           </span>
         </div>
 
-        <div className="flex items-center gap-6 font-medium text-zinc-400 text-xs">
-          <a href="#about" className="hover:text-zinc-100 transition-colors">
-            About
-          </a>
-          <a href="#projects" className="hover:text-zinc-100 transition-colors">
-            Projects
-          </a>
-          <a href="#experience" className="hover:text-zinc-100 transition-colors">
-            Experience
-          </a>
-          <a href="#skills" className="hover:text-zinc-100 transition-colors">
-            Skills
-          </a>
-          <a href="#contact" className="hover:text-zinc-100 transition-colors">
-            Contact
-          </a>
-        </div>
+        <div className="flex flex-wrap items-center justify-center sm:justify-end gap-6">
+          <div className="flex items-center gap-6 font-medium text-zinc-400 text-xs">
+            <a href="#about" className="hover:text-zinc-100 transition-colors">
+              About
+            </a>
+            <a href="#projects" className="hover:text-zinc-100 transition-colors">
+              Projects
+            </a>
+            <a href="#experience" className="hover:text-zinc-100 transition-colors">
+              Experience
+            </a>
+            <a href="#skills" className="hover:text-zinc-100 transition-colors">
+              Skills
+            </a>
+            <a href="#contact" className="hover:text-zinc-100 transition-colors">
+              Contact
+            </a>
+          </div>
 
-        <button
-          onClick={scrollToTop}
-          className="p-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white border border-zinc-800 transition-all flex items-center gap-1.5"
-          title="Scroll back to top"
-        >
-          <ArrowUp className="w-3.5 h-3.5" />
-          <span className="font-mono text-[11px]">Top</span>
-        </button>
+          <button
+            onClick={scrollToTop}
+            className="p-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white border border-zinc-800 transition-all flex items-center gap-1.5"
+            title="Scroll back to top"
+          >
+            <ArrowUp className="w-3.5 h-3.5" />
+            <span className="font-mono text-[11px]">Top</span>
+          </button>
+        </div>
       </div>
     </footer>
   );

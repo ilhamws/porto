@@ -14,13 +14,7 @@ import {
 import { GithubIcon } from "./icons/SocialIcons";
 
 export const ProjectsBento: React.FC = () => {
-  const [filter, setFilter] = useState<"all" | "ai" | "fullstack" | "security">("all");
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
-
-  const filteredProjects =
-    filter === "all"
-      ? PROJECTS
-      : PROJECTS.filter((p) => p.category === filter);
 
   const getProjectIcon = (id: string) => {
     switch (id) {
@@ -42,49 +36,19 @@ export const ProjectsBento: React.FC = () => {
   return (
     <section id="projects" className="py-24 bg-[#09090b] border-t border-zinc-800/80 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header & Category Filters */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-          <div>
-            <span className="text-xs font-mono uppercase tracking-widest text-zinc-500 font-medium block mb-2">
-              Selected Works
-            </span>
-            <h2 className="text-3xl sm:text-4xl font-semibold tracking-[-0.035em] text-zinc-100">
-              Featured Systems & Case Studies
-            </h2>
-            <p className="mt-2 text-zinc-400 text-sm max-w-xl leading-relaxed font-normal">
-              Production architectures demonstrating deep learning inference, modern web client experiences,
-              and resilient Linux daemon services.
-            </p>
-          </div>
-
-          {/* Filter Pills */}
-          <div className="flex flex-wrap items-center gap-1 p-1 rounded-xl bg-zinc-900 border border-zinc-800 self-start md:self-auto font-mono text-xs">
-            {(
-              [
-                { key: "all", label: "All Works" },
-                { key: "ai", label: "AI & ML" },
-                { key: "security", label: "Security & Systems" },
-                { key: "fullstack", label: "Full Stack" },
-              ] as const
-            ).map((tab) => (
-              <button
-                key={tab.key}
-                onClick={() => setFilter(tab.key)}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-medium transition-colors ${
-                  filter === tab.key
-                    ? "bg-zinc-100 text-zinc-950 font-semibold shadow-sm"
-                    : "text-zinc-400 hover:text-zinc-200 hover:bg-zinc-800/50"
-                }`}
-              >
-                {tab.label}
-              </button>
-            ))}
-          </div>
+        {/* Section Header */}
+        <div className="mb-12">
+          <span className="text-xs font-mono uppercase tracking-widest text-zinc-500 font-medium block mb-2">
+            Selected Works
+          </span>
+          <h2 className="text-3xl sm:text-4xl font-semibold tracking-[-0.035em] text-zinc-100">
+            Featured Systems & Case Studies
+          </h2>
         </div>
 
         {/* Bento Grid Layout */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-          {filteredProjects.map((project) => {
+          {PROJECTS.map((project) => {
             return (
               <article
                 key={project.id}

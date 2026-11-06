@@ -29,17 +29,10 @@ export const ContactSection: React.FC = () => {
     <section id="contact" className="py-24 bg-[#09090b] border-t border-zinc-800/80 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
-        <div className="text-center max-w-xl mx-auto mb-16">
-          <span className="text-xs font-mono uppercase tracking-widest text-zinc-500 font-medium block mb-2">
-            Direct Communication
-          </span>
+        <div className="text-center max-w-xl mx-auto mb-14">
           <h2 className="text-3xl sm:text-4xl font-semibold tracking-[-0.035em] text-zinc-100">
-            Let's Build Something Exceptional
+            Direct Communication
           </h2>
-          <p className="mt-3 text-zinc-400 text-sm leading-relaxed font-normal">
-            Open to engineering roles, AI system integrations, and full stack product consultations.
-            Connect with me directly through any of the verified channels below.
-          </p>
         </div>
 
         {/* 4 Prominent Direct Contact Cards */}

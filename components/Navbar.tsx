@@ -30,27 +30,9 @@ export const Navbar: React.FC = () => {
           : "bg-transparent border-b border-transparent"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-        {/* Brand / Monogram */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 rounded-lg bg-zinc-900 border border-zinc-800 flex items-center justify-center group-hover:border-zinc-700 transition-colors">
-            <span className="font-mono font-semibold text-zinc-200 text-xs tracking-wider">
-              IW
-            </span>
-          </div>
-          <div className="leading-tight">
-            <span className="font-medium text-zinc-100 tracking-tight text-sm group-hover:text-white transition-colors flex items-center gap-1.5">
-              {PERSONAL_INFO.shortName}
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
-            </span>
-            <span className="text-[11px] text-zinc-500 block font-mono">
-              Full Stack Developer
-            </span>
-          </div>
-        </a>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-1 text-xs font-medium text-zinc-400">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+        {/* Desktop Navigation - Centered */}
+        <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 items-center gap-1 text-xs font-medium text-zinc-400">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -63,7 +45,7 @@ export const Navbar: React.FC = () => {
         </nav>
 
         {/* Right CTA Actions */}
-        <div className="flex items-center gap-2.5">
+        <div className="flex items-center gap-2.5 ml-auto">
           {/* CV Download */}
           <a
             href={`${import.meta.env.BASE_URL}CV_Ilham_Wahyu_Saputro.pdf`}
